@@ -1,0 +1,198 @@
+repl.it - En utvecklingsmiljö för Python direkt i webbläsaren, välj språket Python (inte Python 2.7). Det kan vara bra att skapa ett konto om man vill men inte nödvändigt. 
+
+Kommentarer görs med #.
+
+För heltal: int(), ex tal = 7
+För textremsor: ‘’ = str(), ex text = "någon text"
+osv.
+
+Vi ansätter variabler med =
+
+En viktig typ av variabel är Boolesk variabel (stor bokstav). Det är den enklaste typen av variabel och är helt enkelt True och False. Notera att 1 är samma som True och 0 är samma som False. Boolesk variabel är alltid resultatet av en jämförelse. Det skriver vi med ==
+
+For-slingor har vi för ett bestämt antal omgångar.
+
+for variabel in iterabel:
+gör nåt
+
+While-slingor har vi för ett obestämt antal gånger. Slingan fortsätter så länge satsen utvärderas som True. Vi kan ha oändliga slingor genom att sats = True. Vi kan bryta en While-slinga med kommandot break. 
+
+while sats:
+gör nåt
+
+För att skriva ut något i python skriver vi print().
+
+För att ta in information från användaren kan vi använda input(). Notera att variabel som ansätts kommer vara str. I parentesen skriver vi vad som ska skrivas ut till användaren. Vi kan ändra variabel till typen int om vi säger att den hämtade variablen ska vara int av sig själv, ex input = int(input).
+
+Om vi vill att programmet ska göra olika saker beroende på vissa utfall använder vi if, elif och else.
+
+if sats1:
+görs om sats1 utvärderas som True
+
+elif sats2:
+görs om sats2 utvärderas som False och sats2 utvärderas som True
+
+else:
+görs som sats1 och sats2 utvärderas som False
+
+För dessa är det användbart med and och or, som är logiska operator. Noter dock att or inte är uteslutande.
+
+A	B	A and B	A or B
+True	True	True	True
+True	False	False	True
+False	True	False	True
+False	False	False	False
+
+Vi testade även att låta programmet ge oss slumpade tal med hjälp av random modulen.
+
+import random - för att låta programmet ta del av allt random modulen. 
+
+slumpat_tal = random.randint(1,10) - för att ansätta ett tal till ett slumpad heltal mellan 1 och 10. 
+
+Nästa vecka kommer vi titta fortsätta utveckla det vi gjorde igår, något som kan vara bra att titta lite på tills nästa vecka är följande:
+
+Variabler av typerna float och list - Float är decimaltal och list är flera variabler.
+
+Try / except statements - för att hindra att programmet kraschar 
+
+Funktioner - som mindre program inuti programmet
+
+ 
+Jag skickar en länk till projecteuler, https://projecteuler.net/
+About - Project Euler
+projecteuler.net
+About Project Euler What is Project Euler? Project Euler is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve.
+
+ och uppmuntrar er att göra första och andra uppgiften för att bli bekväma med programmering och problemlösning med hjälp av programmering. Ett tips är att först testa att göra hemuppgiften i dokumentet och sedan gå över till projectEuler. För att lösa första uppgiften kan det vara bra att använda modulooperatorn( % ) för att titta på vilka tal som är jämt delbara med vilka. Ni kan läsa mer om operatorn här om ni är intresserade:https://sv.wikipedia.org/wiki/Modul%C3%A4r_aritmetik
+
+Try / except statments. Används för att felsäkra koden och förhindrar att programmet crachar. 
+
+Try: 
+    Gör något 
+Except någotSpecifktFel: 
+     Gör detta istället 
+Except: 
+    Om det inte fungerade gör detta 
+
+Funktioner skriver vi med följande syntax:
+
+
+def funktionsnamn(parameter1, parameter2, …):
+gör nåt
+return något
+
+
+For-slingor har vi för ett bestämt antal omgångar.
+
+
+for variabel in iterabel:
+gör nåt
+
+
+While-slingor har vi för ett obestämt antal gånger. Slingan fortsätter så länge satsen utvärderas som True. Vi kan ha oändliga slingor genom att sats = True
+
+
+while sats:
+gör nåt
+
+
+Python innehåller nästan ingenting. Vi behöver nästan alltid importera moduler för att göra saker. Finns hur många som helst.
+
+Vi kan skriva:
+import module
+import module as name (Dessa har vi inte pratat om ännu men det skadar inte att känna till)
+from module import *
+from module import functionName
+
+Vanliga moduler: math, random, numpy, scipy, time, itertools, tkinter
+
+
+Tänk på: välj bra variabelnamn. Att läsa kod ska kännas naturligt. Kod läses oftare än den skrivs! Välj bra funktionsnamn som förklarar vad funktionen gör.Skriva läslig och snygg kod! Var generös med mellanslag och blanksteg. Variabler skriver vi med kamelNotation.
+
+
+Listor definerar vi med 
+
+namnPåLista = []
+
+Där vi kan välja att lägga saker i listan senare eller direkt. Exempelvis med append metoden.
+
+NamnPåLista.append(någonVariabel). Detta gör att den hamnar sist i listan. 
+
+Varje plats i en lista har ett assosieras med ett nummer, ett index. Index 0 är den första platsen i en lista.
+
+Vi kan även använda en for loop för att loopa över en lista. 
+
+ex
+
+for i in namnPåLista:
+    print(i)
+
+I det här mailet bifogar jag koden vi arbetade med i onsdags. Försök att lägga till följade saker i spelet:
+•	Namn på spelaren som man får mata in innan spelet börjar
+•	Poäng på hur många försök användaren behövde för att vinna
+•	Gör spelet oändligt långt genom att det slumpade talet blir 10 gånger större för varje itteration av spelet. Tips använd er av en ny variabel för att hantera nivåer. 
+•	Skapa en topplista över de bästa spelarna med respektive försök och ev nivåer.
+•	Fråga användaren i slutet av spelet om det är ny eller samma användare, om hen vill spela igen eller titta på toplistan. 
+Tänk på att håll koden välkommenterad och lätläsligt. 
+
+Försök även implementera några funktioner med listor: 
+•	Skapa en funktion som tar en lista som input och ger tillbaka en omvänd lista. Ex [1,2,3] ger [3,2,1]
+•	Skapa en funktion som generar en lista med slumpade tal. Låt sedan användaren välja längden på listan och rangen för de slumpade talen.
+•	Skapa en funktion som tar en lista som input och placerar om objekten i listan slumpat. (tänk blandare)
+•	
+
+https://www.youtube.com/watch?v=pTB0EiLXUC8&t=1s 
+
+För att ladda ned Python: 
+
+https://www.python.org/
+
+Eller en lite mer avancerad (och användbar utvecklingsmiljö):
+
+https://www.jetbrains.com/pycharm/
+
+Använde en ny programmeringsmiljö direkt på datorn istället för på någon annans server. Vi använde anaconda men i en form som gjorde det indentiskt med utvecklingsmiljön man får när man laddar ned Python från deras officella hemsida. Vi kommer fortsätta använda detta genom kurser för det är bra att ha en grundläggande förståelse för hur den fungerar innan man går över till en annan utvecklingsmiljö. Ni behöver öppna filerna via idle. 
+
+Sorteringsalgoritmer - specifikt bubble sort. Se filen bubble, wikipediasidan samt gärna filmen jag länkar till. 
+
+Objektorientering: 
+
+
+Objekt kombinerar variabler och funktioner till ett paket. Är i princip grunden i all modern programmering. I objekt kallas variabler atribut och funktioner kallas metoder.
+
+
+Ord: objekt, klass, metod, attribut, instans(iera), konstruktor, "self", __init__. 
+
+
+Klass är en ritning för ett objekt.
+
+
+Objekt är en instans av en klass. 
+
+
+Kunstruktor när ett objekt instansieras. Syntax, __init__(self, ev fler parameterar)
+
+
+self är en refferens till objektet själv. 
+
+
+Till nästa gång ska vi titta vidare på hur man läser och skriver till filer samt delar upp sitt programm i olika filer. Har ni tid är detta något som kan vara bra att titta lite på innan. 
+
+
+
+https://www.python.org/
+ 	Welcome to Python.org
+www.python.org
+Functions Defined. The core of extensible programming is defining functions. Python allows mandatory and optional arguments, keyword arguments, and even arbitrary argument lists.
+
+https://en.wikipedia.org/wiki/Bubble_sort
+
+ 	Bubble sort - Wikipedia
+en.wikipedia.org
+Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the list, compares adjacent pairs and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted. The algorithm, which is a comparison sort, is named for the way smaller or larger elements "bubble" to the top of the list.
+
+
+https://www.youtube.com/watch?v=kPRA0W1kECg&t=1s
+ 	15 Sorting Algorithms in 6 Minutes - YouTube
+www.youtube.com
+Visualization and "audibilization" of 15 Sorting Algorithms in 6 Minutes. Sorts random shuffles of integers, with both speed and the number of items adapted to each algorithm's complexity. The ...
